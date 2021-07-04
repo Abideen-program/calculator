@@ -9,7 +9,7 @@
 body{
     height: 100vh;
     width: 100%;
-    background: linear-gradient(#2196f3, #e91e63);
+    background: linear-gradient(45deg, rgb(204, 6, 112), rgb(215, 177, 235));
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -27,6 +27,7 @@ bottom: -100px;
 .bubbles span{
     height: 60px;
     width: 60px;
+    border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(5px);
@@ -36,18 +37,26 @@ bottom: -100px;
 }
 
 @keyframes move{
-    100%{
+    25%{
+        transform: translateY(-30vh);
+    }
+
+    30%{
+        transform: translateX(-50vh);
+    }
+
+    50%{
         transform: translateY(-90vh);
     }
 }
 
 .bubbles span.one{
-    animation-delay: 2.2s;
+    animation-delay: 2s;
     transform: scale(2.15);
 }
 
 .bubbles span.two{
-    animation-delay: 3.5s;
+    animation-delay: 3s;
     transform: scale(1.5);
 }
 
@@ -79,6 +88,7 @@ bottom: -100px;
 .bubbles span::before{
     content: "";
     position: absolute;
+    border-radius: 50%;
     left: 0;
     top: 0;
     height: 60px;
@@ -96,8 +106,6 @@ bottom: -100px;
 
 .bubbles span.one::before{
     animation-delay: 2.2s;
-
-
 }
 
 .bubbles span.two::before{
