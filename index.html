@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glass-Calculator</title>
-    <link rel="stylesheet" href="./cal.css">
+    <title>Glass-Cal</title>
+    <link rel="stylesheet" href="./lokocal.css">
 </head>
 <body>
+
     <div class="bubbles">
         <span class="one"></span>
         <span class="two"></span>
@@ -15,45 +16,51 @@
         <span class="five"></span>
         <span class="six"></span>
         <span class="seven"></span>
+        <span class="eight"></span>
+        <span class="nine"></span>
+        <span class="ten"></span>
     </div>
+
     <div class="container">
-        <form action="#" name="forms">
-            <input type="text" name="answer">
+        <form action="#" id="forms">
+            <input type="text" id="input">
             <div class="buttons">
-                <input type="button" value="AC"  onclick="forms.answer.value = ''" style="background: red;">
-                <input type="button" value="DEL"  onclick="forms.answer.value = forms.answer.value.substr(0, forms.answer.value.length - 1) ">
-                <input type="button" value="%" onclick="forms.answer.value += '%'">
-                <input type="button" value="/" onclick="forms.answer.value += '/'">
-            </div>
-            
-            <div class="buttons">
-                <input type="button" value="7" onclick="forms.answer.value += '7'">
-                <input type="button" value="8" onclick="forms.answer.value += '8'">
-                <input type="button" value="9" onclick="forms.answer.value += '9'">
-                <input type="button" value="*" onclick="forms.answer.value += '*'">
+                <input type="button" value="AC" id="ac">
+                <input type="button" value="DEL" id="del">
+                <input type="button" value="%" id="module">
+                <input type="button" value="/" id="slash">
             </div>
 
             <div class="buttons">
-                <input type="button" value="4" onclick="forms.answer.value += '4'">
-                <input type="button" value="5" onclick="forms.answer.value += '5'">
-                <input type="button" value="6" onclick="forms.answer.value += '6'">
-                <input type="button" value="-" onclick="forms.answer.value += '-'">
+                <input type="button" value="7" id="seven">
+                <input type="button" value="8" id="eight">
+                <input type="button" value="9" id="nine">
+                <input type="button" value="*" id="star">
             </div>
 
             <div class="buttons">
-                <input type="button" value="1" onclick="forms.answer.value += '1'">
-                <input type="button" value="2" onclick="forms.answer.value += '2'">
-                <input type="button" value="3" onclick="forms.answer.value += '3'">
-                <input type="button" value="+" onclick="forms.answer.value += '+'">
+                <input type="button" value="4" id="four">
+                <input type="button" value="5" id="five">
+                <input type="button" value="6" id="six">
+                <input type="button" value="-" id="minus">
             </div>
 
             <div class="buttons">
-                <input type="button" value="0" onclick="forms.answer.value += '0'">
-                <input type="button" value="00" onclick="forms.answer.value += '00'">
-                <input type="button" value="." onclick="forms.answer.value += '.'">
-                <input type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)" style="background: linear-gradient(to right, rgb(232, 204, 79), rgb(174, 27, 13));">
+                <input type="button" value="1" id="one">
+                <input type="button" value="2" id="two">
+                <input type="button" value="3" id="three">
+                <input type="button" value="+" id="plus">
+            </div>
+
+            <div class="buttons">
+                <input type="button" value="0" id="zero">
+                <input type="button" value="00" id="zero-zero">
+                <input type="button" value="." id="dot">
+                <input type="button" value="=" id="equal">
             </div>
         </form>
     </div>
+
+    <script type="text/javascript" src="./lokocal.js"></script>
 </body>
 </html>
