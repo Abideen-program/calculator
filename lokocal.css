@@ -133,7 +133,7 @@ body{
 }
 
 .container input[type=button]{
-    width: calc(100% / 4 - 3px);
+    width: calc(100% / 4 - 5px);
     height: 65px;
     margin-top: 15px;
     background-color: transparent;
