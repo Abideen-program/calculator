@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background: linear-gradient(to right, rgb(90, 24, 177), rgb(219, 86, 158));
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bubbles{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 50px;
+}
+
+.bubbles span{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    animation: move 10s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes move{
+    50%{
+        transform: translateY(-85vh);
+    }
+}
+
+.bubbles span.one{
+    animation-delay: 0.3s;
+    transform: scale(2);
+}
+
+.bubbles span.two{
+    animation-delay: 0.1s;
+    transform: scale(1.5);
+}
+
+.bubbles span.three{
+    animation-delay: 0.4s;
+    transform: scale(1);
+}
+.bubbles span.four{
+    animation-delay: 0.5s;
+    transform: scale(0.5);
+}
+.bubbles span.five{
+    transform: scale(.4);
+}
+.bubbles span.six{
+    animation-delay: 0.9s;
+    transform: scale(1.1);
+}
+.bubbles span.seven{
+    animation-delay: 0.2s;
+    transform: scale(.6);
+}
+
+.bubbles span.eight{
+    animation-delay: 0.7s;
+    transform: scale(0.9);
+}
+
+.bubbles span.nine{
+    animation-delay: 0.1s;
+    transform: scale(2);
+}
+
+.bubbles span.ten{
+    animation-delay: 0.1s;
+    transform: scale(1);
+}
+
+.bubbles span::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    /* transform: skew(45deg) translateX(150px); */
+    animation: mirror 3s linear infinite;
+}
+
+@keyframes mirror{
+    50%{
+        transform: translateX(-100px);
+    }
+
+    100%{
+        transform: translateX(100px);
+    }
+}
+
+.container{
+    width: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.container input[type=text]{
+    padding: 10px;
+    width: 100%;
+    height: 65px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.container input[type=button]{
+    width: calc(100% / 4 - 3px);
+    height: 65px;
+    margin-top: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.container input[type=button]:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container input[type=button]:active{
+    font-weight: bold;
+}
+
+@media(max-width: 768px){
+    .container input[type="button"]{
+        height: 50px;
+    }
+}
+
+@media(max-width: 428px){
+    .container{
+        width: 300px;
+    }
+}
+
+@media(max-width: 355px){
+    .container{
+        width: 250px;
+    }
+}
+
+
